@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0B0C10;
+  --foreground: #E6E6E6;
+  --cyan: #00FFF0;
+  --purple: #8A2BE2;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  --font-heading: 'Space Grotesk', 'JetBrains Mono', monospace;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-cyan: var(--cyan);
+  --color-purple: var(--purple);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(to bottom, #0B0C10, #1a1d29, #0B0C10);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+code, pre {
+  font-family: var(--font-mono);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0C10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00FFF0 0%, #8A2BE2 100%);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00FFF0 50%, #8A2BE2 100%);
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(0, 255, 240, 0.5),
+                 0 0 20px rgba(0, 255, 240, 0.3),
+                 0 0 30px rgba(0, 255, 240, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 255, 240, 0.8),
+                 0 0 30px rgba(0, 255, 240, 0.5),
+                 0 0 40px rgba(0, 255, 240, 0.3);
+  }
+}
+
+.glow-text {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #00FFF0, #8A2BE2, #00FFF0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
