@@ -7,7 +7,7 @@ export interface WorkshopPage {
   notebookUrl?: string;
 }
 
-export const GITHUB_REPO = "YOUR_GITHUB_USERNAME/unlocking_quantum_computing";
+export const GITHUB_REPO = "tchiappisi/unlocking_quantum_computing";
 
 export const workshopPages: WorkshopPage[] = [
   { id: "home", path: "/", title: "Home", subtitle: "Orientation & Motivation", order: 0 },
