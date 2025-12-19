@@ -7,7 +7,7 @@ export interface WorkshopPage {
   notebookUrl?: string;
 }
 
-export const GITHUB_REPO = "tchiappisi/unlocking_quantum_computing";
+export const GITHUB_REPO = "tchiappisi/unlocking_quantum_computing_workshop";
 
 export const workshopPages: WorkshopPage[] = [
   { id: "home", path: "/", title: "Home", subtitle: "Orientation & Motivation", order: 0 },
@@ -26,7 +26,7 @@ export const workshopPages: WorkshopPage[] = [
 ];
 
 export function getColabUrl(notebookName: string): string {
-  return `https://colab.research.google.com/github/${GITHUB_REPO}/blob/main/notebooks/${notebookName}`;
+  return `https://colab.research.google.com/github/${GITHUB_REPO}/blob/v2/notebooks/${notebookName}`;
 }
 
 export function getPageByPath(path: string): WorkshopPage | undefined {
